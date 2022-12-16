@@ -8,9 +8,7 @@ describe('Read notification', () => {
     const notificationsRepository = new InMemoryNotificationsRepository();
     const readNotification = new ReadNotification(notificationsRepository);
 
-    const notification = makeNotification({
-      recipientId: 'example-recipient-id',
-    });
+    const notification = makeNotification();
 
     await notificationsRepository.create(notification);
 

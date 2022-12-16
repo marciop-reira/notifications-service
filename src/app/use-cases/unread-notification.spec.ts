@@ -9,7 +9,7 @@ describe('Unread notification', () => {
     const unreadNotification = new UnreadNotification(notificationsRepository);
 
     const notification = makeNotification({
-      recipientId: 'example-recipient-id',
+      readAt: new Date(),
     });
 
     await notificationsRepository.create(notification);
