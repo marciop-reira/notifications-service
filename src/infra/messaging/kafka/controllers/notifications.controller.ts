@@ -16,11 +16,6 @@ export class NotificationsController {
   async handleSendNotification(
     @Payload() { recipientId, content, category }: SendNotificationPayload,
   ) {
-    console.log({
-      recipientId,
-      content,
-      category,
-    });
     await this.sendNotification.execute({
       recipientId,
       content,
